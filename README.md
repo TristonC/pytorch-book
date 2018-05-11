@@ -62,7 +62,7 @@ You are welcome to open issues or send pull requests if you think there is any i
    ```
 
 ## Visdom load failure and its solution
-**The latest version of the visdom has solved this problem. Please upgrade it."
+**The latest version of the visdom has solved this problem. Please upgrade it.**
 ```
 pip install --upgrade visdom
 ```
