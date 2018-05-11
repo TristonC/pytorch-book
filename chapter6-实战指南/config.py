@@ -3,12 +3,12 @@ import warnings
 
 
 class DefaultConfig(object):
-    env = 'default'  # visdom 环境
-    model = 'ResNet34'  # 使用的模型，名字必须与models/__init__.py中的名字一致
+    env = 'default'  # visdom environment
+    model = 'ResNet34'  # the model, name must be the same as in models/__init__.py
 
-    train_data_root = './data/train/'  # 训练集存放路径
-    test_data_root = './data/test1'  # 测试集存放路径
-    load_model_path = None  # 加载预训练的模型的路径，为None代表不加载
+    train_data_root = './data/train/'  # path the training dataset
+    test_data_root = './data/test1'  # path to the testing dataset
+    load_model_path = None  # path to the pre-trained model，None for not loading
 
     batch_size = 32  # batch size
     use_gpu = True  # user GPU or not
@@ -21,12 +21,12 @@ class DefaultConfig(object):
     max_epoch = 10
     lr = 0.001  # initial learning rate
     lr_decay = 0.5  # when val_loss increase, lr = lr*lr_decay
-    weight_decay = 0e-5  # 损失函数
+    weight_decay = 0e-5 
 
 
 def parse(self, kwargs):
     """
-    根据字典kwargs 更新 config参数
+    update config parameter from kwargs dict
     """
     for k, v in kwargs.items():
         if not hasattr(self, k):
