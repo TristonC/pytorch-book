@@ -1,83 +1,85 @@
-这是书籍《深度学习框架PyTorch：入门与实践》的对应代码，但是也可以作为一个独立的PyTorch入门指南和教程。
+This the code repository for the book "Deep Learning Framework PyTorch: Introduction and Application". But it can also serves as an independent introduction or tutorial for PyTorch.
 
+## Content
 
-## 内容
+The content of the book and code hub can be demonstrated by the following picture:
+![Mind Map](http://7zh43r.com2.z0.glb.clouddn.com/del/mindmap.png)
 
-该书（教程/仓库）的内容如图所示：
-![思维导图](http://7zh43r.com2.z0.glb.clouddn.com/del/mindmap.png)
+This book is divided into two major parts:
 
-可以看出本教程可以分为两部分：
+**Fundamental Part** (the first 5 chapters) introduces the PyTorch, includeing the major components and some useful tools for deep learning. Jupter Notebook is used for the code demonstration. Readers can modify the Jupyter notebooks to repeatedly try and run for better understanding.
 
-**基础部分**（前五章）讲解PyTorch内容，这部份介绍了PyTorch中主要的的模块，和深度学习中常用的一些工具。对于这部分内容，这里利用Jupyter Notebook作为教学工具，读者可以结合notebook修改运行，反复实验。
+- Chapter 2 introduces how to install and configure the PyTorch. It also provides a short introduction of PyTorch itself based on the officail tutorial. Readers can take 1 or 2 hours for the introduction and choose which chapter to proceeded based on his or her interests.
+- Chapter 3 introduces the multi-dimentional Tensor and dynamic graph autograd/Variable in PyTorch with examples. A linear regression example is implemented using both Tensor and autograd for user to compare the difference of the two. Design of the Tensor and the a analysis of the autograd are also included in this chapter for user to master the two most important components of PyTorch.
+- Chapter 4 introduces the nural network module nn in Pytorch. Layer, loss function and  optimzer are also introduced in this chapter. A less than 50 lines of code implmentation of one time ImageNet champion Resnet is explained at the end of this chapter.
+- Chapter 5 introduces the utility tools of data loader, GPU acceleration, serialization, and visualization.
 
-- 第二章介绍如何安装PyTorch和配置学习环境。同时提供了一个快速入门教程，基于官方的教程简化并更新内容，读者可以花费大约1到2小时的时间快速完成入门任务，而后根据需求再选择深入阅读后续相关章节的内容。
-- 第三章介绍了PyTorch中多维数组Tensor和动态图autograd/Variable的使用，并配以例子，让读者分别使用Tensor和autograd实现线性回归，比较二者的不同点。除了介绍这二者的基础使用之外，本章还对Tensor的底层设计，以及autograd的计算图原理进行比较深入分析，希望能使得读者能对这些底层知识有更全面的掌握。
-- 第四章介绍了PyTorch中神经网络模块nn的基础用法，同时讲解了神经网络中“层”，“损失函数”，“优化器”等，最后带领读者用不到50行的代码搭建出曾夺得ImageNet冠军的ResNet。
-- 第五章介绍了PyTorch中数据加载，GPU加速，持久化和可视化等相关工具。
+**Practical Part** (chapter 6 to chapter 10) eplains and implements several cool applications using PyTorch. This repository contains the complete code for the implementation together with the pre-trained models for user to play with.
 
-**实战部分**（第六到十章）利用PyTorch实现了几个酷炫有趣的应用，对于这部分的内容，本仓库给出完整的实现代码，并提供预训练好的模型作为demo，供读者测试。
-
-- 第六章是承上启下的一章，这一章的目标不是教会读者新函数，新知识，而是结合Kaggle中一个经典的比赛，实现一个深度学习中比较简单的图像二分类问题。在实现过程中，带领读者复习前五章的知识，并提出代码规范以合理的组织程序，代码，使得程序更加可读，可维护。第六章还介绍了在PyTorch中如何进行debug。
+- Chapter 6 is a transition chapter. It is not used for learning new functions or modules. Instead, a binary classification task of dog and cat, a classic competition from Kaggle, is implemented and explained step by step. It helps readers to review the knowlege of the previous 5 chapters. It also introduces some rules of organizing the code to make it more readable and maintainable. How to debug in PyTorch is also introduced in this chapter.
 - 第七章为读者讲解了当前最火爆的生成对抗网络（GAN），带领读者从头实现一个动漫头像生成器，能够利用GAN生成风格多变的动漫头像。
+- Chapter 7 explores one of the hostest nuraul networks, the Generative Adversarial Networks (GAN). A anime character generator is implemented and explained with GAN. TODO
 - 第八章为读者讲解了风格迁移的相关知识，并带领读者实现风格迁移网络，将自己的照片变成高大上的名画。
-- 第九章为读者讲解了一些自然语言处理的基础知识，并讲解了CharRNN的原理。而后利用收集了几万首唐诗，训练出了一个可以自动写诗歌的小程序。这个小程序可以控制生成诗歌的**格式**，**意境**，还能生成**藏头诗**。
-- 第十章为读者介绍了图像描述任务，并以最新的AI Challenger比赛的数据为例，带领读者实现了一个可以进行简单图像描述的的小程序。
-- 第十一章（**新增，实验性**） 由[Diamondfan](https://github.com/Diamondfan) 编写的语音识别。完善了本项目（本项目已囊括图像，文本，语音三大领域的例子）。
+- Chapter 8 eplains the knowlege of neural style. TODO
+- Chapter 9 introduces the basics of Natural Language Processing (NLP). It also explains the CharRNN. Then a program is developed for auto generation of Chinese Poem with model trained from tens of thousands of real Chinese poem from Tang Dynasty. The **style**, the **present moment** can be tuned. And It can even generate **acrostic poem**.
+- Chapter 10 introduces image caption task. With the dataset from latest AI Challenger, it walks the reader throgh the implementation of a image caption project step by step.
+- Chapter 11 (**new, experimental**) A voice recognition project form [Diamondfan](https://github.com/Diamondfan). Improvents are done in this project (including examples for image, text, and voice recognitions)
 
 
- **Notebook中的文字描述内容属于本书的初稿，有描述不通顺，错别字之处还请谅解**。本打算删除notebook中描述的内容，只留下代码，但为了方便读者阅读学习，最终还是决定留下。 我会抽空根据书中内容逐字校对这部分内容，但并不对此并不提供具体时间点。
+**Comments in the Notebook were from the early drafts, please forgive me for typos and lack of clarity**. I planned to remove all the comments in the notebook. But I chose not to for readers to understand the code better. I will review all the comments if I got time. But there is not commitment yet. 
 
-## 是否需要买书
+## Have to buy the book?
 
-书**不是必要的**，这个仓库包含书中50%以上的文字内容，90%以上的代码，尤其是前几章入门内容，几乎是完全保留了书中的讲解内容。读者即使不买书也能正常使用本教程。
+The book is **not a must**. This repository has 50% text of the book and more than 90% of the code. For the first couple of chapters, almost the whole content is shown in the repository. You do not have to have the book to use this repository.
 
-如果你觉得纸质书的优势吸引你，不妨小破费一笔，支持一下作者这大半年来的工作。同时为了尽可能的方便读者，笔者还专门开通腾讯云的服务，用以保存教程中用到的部分模型，预处理的数据和部分大文件。
+But, if you like to read a hard copy of the book, and not mind to spend a little amount of money to support my half year's work, a purchase of this book is appreciated.
 
-## 代码说明
+## Instruction of the Code
 
-- 教程代码同时在Python2和Python3下测试通过
-- 实战部分代码还同时在GPU和CPU环境下测试通过
-- ~~所有的代码都是基于最新版的PyTorch 0.2.0~~，本人承诺会至少维护代码更新兼容到PyTorch `0.4`
+- All code has been tested both in Python2 and in Python3
+- The code in the practical part has been tested both on CPU and on GPU.
+- ~~All the code are based on the PyTorch 0.2.0~~.  And I am committed to mained the code at least to the version `0.4`
 
-目前前五章的代码已经更新到PyTorch 0.3.0 , 如果你想在PyTorch 0.2.0下运行,请 
+Currently, the code for the first 5 chapters has been updated to PyTorch 0.3.0. If you want to run it in PyToch 0.2.0, please do
 ```
 git checkout v0.2
 ```
 
-如果有任何不当，或者有待改进的地方，欢迎读者开issue讨论，或者提交pull request。
+You are welcome to open issues or send pull requests if you think there is any inappropriate or need-to-improve part.
 
-## 环境配置
+## Configurations
 
-1. 安装[PyTorch](http://pytorch.org)，请从官网选择指定的版本安装即可，一键安装（即使你使用anaconda，也建议使用pip）。更多的安装方式请参阅书中说明。
+1. Install[PyTorch](http://pytorch.org)，Please pick the verions that is on the official website, using anaconda, or pip. Please refere to the installation part for more opitons.
 
-2. 克隆仓库
+2. Clone this repository
 
    ```python
    git clone https://github.com/chenyuntc/PyTorch-book.git
    ```
 
-3. 安装第三方依赖包
+3. Install dependencies
 
    ```python
    cd pytorch-book && pip install -r requirements.txt
    ```
 
-## Visdom打不开及其解决方案
-**新版的visdom已经解决了这个问题,只需要升级即可**
+## Visdom load failure and its solution
+**The latest version of the visdom has solved this problem. Please upgrade it."
 ```
 pip install --upgrade visdom
 ```
-之前的[解决方案](https://github.com/chenyuntc/pytorch-book/blob/2c8366137b691aaa8fbeeea478cc1611c09e15f5/README.md#visdom%E6%89%93%E4%B8%8D%E5%BC%80%E5%8F%8A%E5%85%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88) 不再需要，已删除。
+The previous [solution](https://github.com/chenyuntc/pytorch-book/blob/2c8366137b691aaa8fbeeea478cc1611c09e15f5/README.md#visdom%E6%89%93%E4%B8%8D%E5%BC%80%E5%8F%8A%E5%85%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88) is no long necessaray. And it has been deleted.
 
 ## ^_^
 
-有任何bug，解释不清楚的地方或者是困惑，欢迎开issue
+Please help to open issues for bugs or clarity of any part of content.
 
-欢迎pull requests
+
+Pull requests are welcome.
 
 Happy Coding!
 
 ![](http://img14.360buyimg.com/n1/jfs/t13339/32/2463730198/217483/e8148c6b/5a41277dNbd1470c1.jpg)
 
-- [京东购买链接](https://search.jd.com/Search?keyword=pytorch%20入门与实践&enc=utf-8&wq=pytorch%20入门与实践&pvid=8b0d91d7108845ad8cbaf596326f3eb3)
-- [当当购买链接](http://search.dangdang.com/?key=pytorch%20%C8%EB%C3%C5%D3%EB%CA%B5%BC%F9&act=input)
+- [purchase from jd.com](https://search.jd.com/Search?keyword=pytorch%20入门与实践&enc=utf-8&wq=pytorch%20入门与实践&pvid=8b0d91d7108845ad8cbaf596326f3eb3)
+- [purchase from dangdang.com](http://search.dangdang.com/?key=pytorch%20%C8%EB%C3%C5%D3%EB%CA%B5%BC%F9&act=input)
